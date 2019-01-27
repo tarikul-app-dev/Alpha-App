@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">AlphaIS</string>
+
+    <string-array name="spinner_role">
+        <item>Standortleiter</item>
+        <item>Mitarbeiter </item>
+        <item>Teamleiter</item>
+        <item>Standortleiter</item>
+
+    </string-array>
+    <string-array name="spinner_projekt">
+        <item>2018_1021_43_BMW_Magna</item>
+        <item>2018_1021_44_BMW_Webasto</item>
+    </string-array>
+
+    <string-array name="spinner_bildocument">
+        <item>ja</item>
+        <item>nein</item>
+    </string-array>
+
+    <string-array name="spinner_prüfart">
+        <item>Einzelteil</item>
+        <item>Sammelausschuss</item>
+    </string-array>
+
+    <string-array name="spinner_packeinheit">
+        <item>GLT</item>
+        <item>KLT</item>
+        <item>Einzelteil</item>
+    </string-array>
+
+    <string-array name="spinner_identifikationsart">
+        <item>HU-Nummer</item>
+        <item>Gestellnummer</item>
+        <item>Lieferscheinnummer</item>
+    </string-array>
+</resources>
