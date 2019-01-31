@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="koffi.simplifiedcodingalpha.com.jonadanapaul.activities.ProjektInitAct">
+    tools:context="koffi.simplifiedcodingalpha.com.jonadanapaul.activities.ProjektInit1von4Act">
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

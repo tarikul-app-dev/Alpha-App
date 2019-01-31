@@ -5,7 +5,6 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
 import android.widget.LinearLayout;
 
 import butterknife.BindView;
@@ -45,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         linProjektInit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this,ProjektInitAct.class);
+                Intent intent = new Intent(MainActivity.this,ProjektInit1von4Act.class);
                 startActivity(intent);
                // ActivityCompat.finishAffinity(MainActivity.this);
 
