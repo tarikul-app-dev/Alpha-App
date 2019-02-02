@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.ProjektInit3von4Act">
+    tools:context=".activities.ProjektInit4von4Act">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -25,26 +25,26 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 >
-                <ImageView
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:background="@drawable/ic_home"
-                    android:layout_marginTop="02dp"
-                    />
+                <!--<ImageView-->
+                    <!--android:layout_width="40dp"-->
+                    <!--android:layout_height="40dp"-->
+                    <!--android:background="@drawable/ic_home"-->
+                    <!--android:layout_marginTop="02dp"-->
+                    <!--/>-->
 
 
 
                 <ImageView
-                    android:layout_width="100dp"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/lgalpha"
+                    android:background="@drawable/ic_tittle"
                     android:layout_centerInParent="true"
                     />
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="90dp"
-                    android:background="@drawable/alpha_logoo"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/ic_home"
                     android:layout_alignParentRight="true"
                     />
 
@@ -94,7 +94,7 @@
                     android:id="@+id/txv_pro_init"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Projektinitierung. (3 von 4)"
+                    android:text="Projektinitierung. (4 von 4)"
                     android:layout_gravity="left"
                     android:layout_marginLeft="09dp"
                     android:textSize="20sp"
@@ -106,7 +106,7 @@
             </LinearLayout>
 
             <LinearLayout
-                android:id="@+id/lin_commodity"
+                android:id="@+id/lin_verfugbare"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
@@ -115,10 +115,10 @@
                 android:layout_marginRight="20dp"
                 >
                 <TextView
-                    android:id="@+id/txv_commodity"
+                    android:id="@+id/txv_verfugbare_mitarbeiter"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Commodity"
+                    android:text="Verfugbare Mitarbeiter"
                     android:layout_gravity="left"
                     android:layout_marginLeft="09dp"
                     android:textSize="20sp"
@@ -128,9 +128,8 @@
 
 
             </LinearLayout>
-
             <LinearLayout
-                android:id="@+id/lin_Warenbegleitschein_fotographieren3"
+
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:layout_marginTop="05dp"
@@ -144,28 +143,51 @@
                     android:background="@drawable/text_input_border"
                     >
 
-                    <EditText
-                        android:id="@+id/edt_msg_content"
+                    <ListView
+                        android:id="@+id/lv_verfugbare_mitarbeiter"
                         android:layout_width="match_parent"
-                        android:layout_height="190dp"
-                        android:inputType="text|textMultiLine"
-                        android:layout_marginTop="04dp"
-                        android:imeOptions="actionDone"
-                        android:background="@null"
-                        android:hint="Enter Here"
-                        android:layout_gravity="center_horizontal"
-                        android:textColorHint="#808080"
-                        android:textColor="#000"
-                        android:textSize="20dp"
+                        android:layout_height="wrap_content"
                         android:layout_marginLeft="05dp"
-                        android:gravity="top"
-                        />
+                        android:layout_marginTop="05dp"
+                        android:layout_marginRight="05dp"
+                        android:divider="#fff"
+                        android:dividerHeight="2dp"
+
+                        >
+
+
+                    </ListView>
+
+
+
 
                 </LinearLayout>
             </LinearLayout>
-
             <LinearLayout
-                android:id="@+id/lin_relevante_fehlerbilder"
+                android:id="@+id/lin_ausgewahlte_mitarbeiter"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="05dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="20dp"
+                >
+                <TextView
+                    android:id="@+id/txv_ausgewahlte_mitarbeiter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ausgewahlte Mitarbeiter"
+                    android:layout_gravity="left"
+                    android:layout_marginLeft="09dp"
+                    android:textSize="20sp"
+                    android:textColor="#808080"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+            <LinearLayout
+
                 android:layout_width="match_parent"
                 android:layout_height="170dp"
                 android:layout_marginTop="05dp"
@@ -179,26 +201,30 @@
                     android:background="@drawable/text_input_border"
                     >
 
-                <ListView
-                    android:id="@+id/lv_rel_fehler"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="05dp"
-                    android:layout_marginTop="05dp"
-                    android:layout_marginRight="05dp"
-                    android:divider="#fff"
-                     android:dividerHeight="2dp"
 
-                    >
+                    <ListView
+                        android:id="@+id/lv_show_selected"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="05dp"
+                        android:layout_marginTop="05dp"
+                        android:layout_marginRight="05dp"
+                        android:divider="#fff"
+                        android:dividerHeight="2dp"
+
+                        >
 
 
-                </ListView>
+                    </ListView>
+
 
 
 
 
                 </LinearLayout>
             </LinearLayout>
+
+
             <LinearLayout
                 android:id="@+id/lin_back_next"
                 android:layout_width="match_parent"
