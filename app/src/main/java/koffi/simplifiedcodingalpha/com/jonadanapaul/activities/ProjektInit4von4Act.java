@@ -185,12 +185,12 @@ public class ProjektInit4von4Act extends AppCompatActivity {
             }
         });
 
-//        rlNext.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Intent intent = new Intent(ProjektInit4von4Act.this,ProjektInit4von4Act.class);
-//                startActivity(intent);
-//            }
-//        });
+        rlNext.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ProjektInit4von4Act.this,FehlerauFnahmeAct.class);
+                startActivity(intent);
+            }
+        });
     }
 }

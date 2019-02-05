@@ -25,7 +25,8 @@
         <activity android:name=".activities.ProjektInit1von4Act" />
         <activity android:name=".activities.ProjektInit2von4Act" />
         <activity android:name=".activities.ProjektInit3von4Act" />
-        <activity android:name=".activities.ProjektInit4von4Act"></activity>
+        <activity android:name=".activities.ProjektInit4von4Act" />
+        <activity android:name=".activities.FehlerauFnahmeAct"></activity>
     </application>
 
 </manifest>
