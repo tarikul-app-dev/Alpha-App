@@ -41,6 +41,17 @@ public class ProjektInit4von4Act extends AppCompatActivity {
     boolean isMA0;
     boolean isMA1;
     boolean isMA2;
+    boolean isMA3;
+    boolean isMA4;
+    boolean isMA5;
+    boolean isMA6;
+    boolean isMA7;
+    boolean isMA8;
+    boolean isMA9;
+    boolean isMA10;
+    boolean isMA11;
+    boolean isMA12;
+
     LocalStorageDB localStorageDB;
 
     @Override
@@ -83,11 +94,11 @@ public class ProjektInit4von4Act extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adpterView, View view, int position,
                                     long id) {
-
+               // RelevanteFehlebilderModel relevanteFehlebilderModel = relevanteFehlebilderModel.get(position);
 
                 if(position==0){
                     if(!isMA0){
-                        lvVerfugbare.getChildAt(0).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         isMA0 =true;
 
                          localStorageDB.open();
@@ -98,7 +109,7 @@ public class ProjektInit4von4Act extends AppCompatActivity {
                         showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
 
                     }else {
-                        lvVerfugbare.getChildAt(0).setBackgroundColor(getResources().getColor(R.color.white));
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
                         isMA0=false;
 
                         localStorageDB.open();
@@ -113,7 +124,7 @@ public class ProjektInit4von4Act extends AppCompatActivity {
 
                 else if(position==1) {
                     if (!isMA1) {
-                        lvVerfugbare.getChildAt(1).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         isMA1 = true;
 
                         localStorageDB.open();
@@ -123,7 +134,7 @@ public class ProjektInit4von4Act extends AppCompatActivity {
                         relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
                         showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
                     } else {
-                        lvVerfugbare.getChildAt(1).setBackgroundColor(getResources().getColor(R.color.white));
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
                         isMA1 = false;
 
                         try{
@@ -141,7 +152,7 @@ public class ProjektInit4von4Act extends AppCompatActivity {
                 }else if(position==2){
 
                     if (!isMA2) {
-                        lvVerfugbare.getChildAt(2).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
                         isMA2 = true;
 
                         localStorageDB.open();
@@ -151,7 +162,7 @@ public class ProjektInit4von4Act extends AppCompatActivity {
                         relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
                         showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
                     } else {
-                        lvVerfugbare.getChildAt(2).setBackgroundColor(getResources().getColor(R.color.white));
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
                         isMA2 = false;
 
                         try{
@@ -167,7 +178,258 @@ public class ProjektInit4von4Act extends AppCompatActivity {
 
                     }
 
+                }else if(position==3){
+                    if (!isMA3) {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        isMA3 = true;
 
+                        localStorageDB.open();
+                        localStorageDB.saveItemName("MA4");
+
+                        showVerfugbareList = localStorageDB.getAllData();
+                        relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                        showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                    } else {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
+                        isMA3 = false;
+
+                        try{
+                            localStorageDB.open();
+                            localStorageDB.delete("MA4");
+                            showVerfugbareList= localStorageDB.getAllData();
+
+                            relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                            showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                        }catch (IndexOutOfBoundsException e){
+                            e.printStackTrace();
+                        }
+
+                    }
+
+                }
+
+                else if(position==4){
+                    if (!isMA4) {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        isMA4 = true;
+
+                        localStorageDB.open();
+                        localStorageDB.saveItemName("MA5");
+
+                        showVerfugbareList = localStorageDB.getAllData();
+                        relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                        showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                    } else {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
+                        isMA4 = false;
+
+                        try{
+                            localStorageDB.open();
+                            localStorageDB.delete("MA5");
+                            showVerfugbareList= localStorageDB.getAllData();
+
+                            relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                            showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                        }catch (IndexOutOfBoundsException e){
+                            e.printStackTrace();
+                        }
+
+                    }
+
+
+                }else if(position==5){
+                    if (!isMA5) {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        isMA5 = true;
+
+                        localStorageDB.open();
+                        localStorageDB.saveItemName("MA6");
+
+                        showVerfugbareList = localStorageDB.getAllData();
+                        relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                        showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                    } else {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
+                        isMA5 = false;
+
+                        try{
+                            localStorageDB.open();
+                            localStorageDB.delete("MA6");
+                            showVerfugbareList= localStorageDB.getAllData();
+
+                            relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                            showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                        }catch (IndexOutOfBoundsException e){
+                            e.printStackTrace();
+                        }
+
+                    }
+
+
+                }else if(position==6){
+                    if (!isMA6) {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        isMA6 = true;
+
+                        localStorageDB.open();
+                        localStorageDB.saveItemName("MA7");
+
+                        showVerfugbareList = localStorageDB.getAllData();
+                        relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                        showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                    } else {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
+                        isMA6 = false;
+
+                        try{
+                            localStorageDB.open();
+                            localStorageDB.delete("MA7");
+                            showVerfugbareList= localStorageDB.getAllData();
+
+                            relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                            showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                        }catch (IndexOutOfBoundsException e){
+                            e.printStackTrace();
+                        }
+
+                    }
+                }else if(position==7){
+                    if (!isMA7) {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        isMA7 = true;
+
+                        localStorageDB.open();
+                        localStorageDB.saveItemName("MA8");
+
+                        showVerfugbareList = localStorageDB.getAllData();
+                        relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                        showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                    } else {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
+                        isMA7 = false;
+
+                        try{
+                            localStorageDB.open();
+                            localStorageDB.delete("MA8");
+                            showVerfugbareList= localStorageDB.getAllData();
+
+                            relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                            showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                        }catch (IndexOutOfBoundsException e){
+                            e.printStackTrace();
+                        }
+
+                    }
+                }else if(position==8){
+                    if (!isMA8) {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        isMA8 = true;
+
+                        localStorageDB.open();
+                        localStorageDB.saveItemName("MA9");
+
+                        showVerfugbareList = localStorageDB.getAllData();
+                        relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                        showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                    } else {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
+                        isMA8 = false;
+
+                        try{
+                            localStorageDB.open();
+                            localStorageDB.delete("MA9");
+                            showVerfugbareList= localStorageDB.getAllData();
+
+                            relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                            showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                        }catch (IndexOutOfBoundsException e){
+                            e.printStackTrace();
+                        }
+
+                    }
+                }else if(position==9){
+                    if (!isMA9) {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        isMA9 = true;
+
+                        localStorageDB.open();
+                        localStorageDB.saveItemName("MA10");
+
+                        showVerfugbareList = localStorageDB.getAllData();
+                        relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                        showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                    } else {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
+                        isMA9 = false;
+
+                        try{
+                            localStorageDB.open();
+                            localStorageDB.delete("MA10");
+                            showVerfugbareList= localStorageDB.getAllData();
+
+                            relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                            showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                        }catch (IndexOutOfBoundsException e){
+                            e.printStackTrace();
+                        }
+
+                    }
+
+
+                }else if (position==10){
+                    if (!isMA10) {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        isMA10 = true;
+
+                        localStorageDB.open();
+                        localStorageDB.saveItemName("MA11");
+
+                        showVerfugbareList = localStorageDB.getAllData();
+                        relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                        showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                    } else {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
+                        isMA10 = false;
+
+                        try{
+                            localStorageDB.open();
+                            localStorageDB.delete("MA11");
+                            showVerfugbareList= localStorageDB.getAllData();
+
+                            relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                            showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                        }catch (IndexOutOfBoundsException e){
+                            e.printStackTrace();
+                        }
+
+                    }
+                }else if(position==11){
+                    if (!isMA11) {
+                         lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.colorPrimary));
+                        isMA11 = true;
+
+                        localStorageDB.open();
+                        localStorageDB.saveItemName("MA12");
+
+                        showVerfugbareList = localStorageDB.getAllData();
+                        relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                        showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                    } else {
+                        lvVerfugbare.getChildAt(position).setBackgroundColor(getResources().getColor(R.color.white));
+                        isMA11 = false;
+
+                        try{
+                            localStorageDB.open();
+                            localStorageDB.delete("MA12");
+                            showVerfugbareList= localStorageDB.getAllData();
+
+                            relevanteFehlerbilderAdapter = new RelevanteFehlerbilderAdapter(showVerfugbareList,ProjektInit4von4Act.this);
+                            showLvVerfugbare.setAdapter(relevanteFehlerbilderAdapter);
+                        }catch (IndexOutOfBoundsException e){
+                            e.printStackTrace();
+                        }
+
+                    }
                 }
 
 

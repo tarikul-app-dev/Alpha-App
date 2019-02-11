@@ -20,13 +20,14 @@
         </activity>
         <activity
             android:name=".activities.SignInAct"
-            android:label="" />
-        <activity android:name=".activities.MainActivity" />
-        <activity android:name=".activities.ProjektInit1von4Act" />
-        <activity android:name=".activities.ProjektInit2von4Act" />
-        <activity android:name=".activities.ProjektInit3von4Act" />
-        <activity android:name=".activities.ProjektInit4von4Act" />
-        <activity android:name=".activities.FehlerauFnahmeAct"></activity>
+            android:label=""  android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.MainActivity"  android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".activities.ProjektInit1von4Act"  android:windowSoftInputMode="stateHidden"  />
+        <activity android:name=".activities.ProjektInit2von4Act"  android:windowSoftInputMode="stateHidden"  />
+        <activity android:name=".activities.ProjektInit3von4Act"  android:windowSoftInputMode="stateHidden"  />
+        <activity android:name=".activities.ProjektInit4von4Act"  android:windowSoftInputMode="stateHidden"  />
+        <activity android:name=".activities.FehlerauFnahmeAct"  android:windowSoftInputMode="stateHidden"  />
+        <activity android:name=".activities.FehlerdetailsAct"  android:windowSoftInputMode="stateHidden" ></activity>
     </application>
 
 </manifest>
